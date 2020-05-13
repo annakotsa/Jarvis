@@ -24,10 +24,10 @@ def print_say(text, self, color=""):
                color: Fore.COLOR (ex Fore.BLUE), color for text
         :return: Nothing to return.
         """
+    print(color + text + Fore.RESET)
     if self.enable_voice:
         self.speech.text_to_speech(text)
-    print(color + text + Fore.RESET)
-
+   
 
 # Functions for printing user output
 # TODO decide which ones use print_say instead of print
